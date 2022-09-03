@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3871a6247c742004c9924490f8ec0434, type: 3}
+  m_Name: Mill
+  m_EditorClassIdentifier: 
+  ID: 2
+  Prefarb: {fileID: 4617232692617565907, guid: 052925f8afaee8540a52b47211c26cb8, type: 3}
+  Reference: {fileID: 6664540196651815928, guid: 4d9c6c47b33f9114790205dcc5f89f96, type: 3}
+  resource:
+  - {fileID: 11400000, guid: 8518a5bd65d0291408f7c17acb5ab116, type: 2}
+  - {fileID: 11400000, guid: 8518a5bd65d0291408f7c17acb5ab116, type: 2}
+  - {fileID: 11400000, guid: 8518a5bd65d0291408f7c17acb5ab116, type: 2}
+  - {fileID: 11400000, guid: 8518a5bd65d0291408f7c17acb5ab116, type: 2}
+  - {fileID: 11400000, guid: 0a2e96f6c4c82c449af12f6f9a9e7ada, type: 2}
+  - {fileID: 11400000, guid: 0a2e96f6c4c82c449af12f6f9a9e7ada, type: 2}
+  - {fileID: 11400000, guid: 0a2e96f6c4c82c449af12f6f9a9e7ada, type: 2}
