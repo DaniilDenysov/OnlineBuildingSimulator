@@ -25,19 +25,17 @@ public class Item : MonoBehaviour
     [PunRPC]
     public void LearnNewPlan (int ID)
     {
+        Debug.Log("RPC recieved!");
         FindObjectOfType<AdminInventory>().LearnNewPlan(ID);
-        if (photonView.IsMine) PhotonNetwork.Destroy(gameObject);
-       // photonView.RPC(nameof(buildManager.LearnNewPlan), RpcTarget.AllBufferedViaServer, ID);
-        //buildManager.LearnNewPlan(_reference);
+        if (PhotonNetwork.IsMasterClient) PhotonNetwork.Destroy(gameObject);
     }
 
     [PunRPC]
     public void CollectResource (int Amount)
     {
+        Debug.Log("RPC recieved!");
         FindObjectOfType<BuildManager>().ResourcesData[ID].ResourceCount += Amount;
-        if (photonView.IsMine) PhotonNetwork.Destroy(gameObject);
-        // photonView.RPC(nameof(buildManager.LearnNewPlan), RpcTarget.AllBufferedViaServer, ID);
-        //buildManager.LearnNewPlan(_reference);
+        if (PhotonNetwork.IsMasterClient) PhotonNetwork.Destroy(gameObject);
     }
 
     private void OnTriggerStay(Collider other) 
@@ -47,7 +45,10 @@ public class Item : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.layer == 8) photonView.RPC(Method, RpcTarget.All, Variable);
+        if (collision.gameObject.layer == 8)
+        {
+            photonView.RPC(Method, RpcTarget.All, Variable);
+        }
     }
 
 }
