@@ -40,7 +40,7 @@ public class Item : MonoBehaviour
 
     private void OnTriggerStay(Collider other) 
     {
-        if (other) transform.position = Vector3.Lerp(transform.position, other.gameObject.transform.position, speed += 0.05f);
+        if (other.gameObject.layer == 8) transform.position = Vector3.Lerp(transform.position, other.gameObject.transform.position, speed += 0.05f);
     }
 
     private void OnCollisionEnter(Collision collision)
